@@ -1,149 +1,160 @@
-.footer {
-    background: black;
-    color: white;
-    padding: 2rem;
-    font-family: sans-serif;
-  }
-  
-  .newsletter h4 {
-    font-weight: bold;
-  }
-  
-  .newsletter-input {
+.filterBar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Left side: item count and filter toggle */
+  .leftFilters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* "SHOW FILTER" clickable text */
+  .filterLink {
+    color: #6e5c72;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* Sort dropdown area */
+  .sortMenu {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Wrapper for sidebar + products */
+  .contentWrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Sidebar (filters) */
+  .sidebar {
+    width: 250px;
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    font-size: 14px;
+  }
+  
+  /* Each filter group section */
+  .filterSection {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Section header (e.g. IDEAL FOR) */
+  .filterHeader {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Toggle collapse icon */
+  .toggleArrow {
+    float: right;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+  }
+  
+  .toggleArrow.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Checkboxes and labels */
+  .checkboxGroup {
     margin-top: 0.5rem;
   }
   
-  .newsletter-input input {
-    padding: 0.5rem;
-    flex: 1;
-    border: none;
-    outline: none;
-  }
-  
-  .newsletter-input button {
-    padding: 0.5rem 1rem;
-    background: none;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-  }
-  
-  .footer-contact-currency {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 2rem 0;
-  }
-  
-  .contact h4, .currency h4 {
-    font-weight: bold;
-  }
-  
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid white;
-    padding-top: 1rem;
-  }
-  
-  .footer-section {
-    border-bottom: 1px solid white;
-    padding: 1rem 0;
-  }
-  
-  .footer-section-header {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
-  .footer-section-list {
-    display: none;
-    list-style: none;
-    padding: 0.5rem 0 0;
-  }
-  
-  .footer-section-list.active {
-    display: block;
-  }
-  
-  .footer-section-list li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .footer-payments {
-    margin-top: 2rem;
-  }
-  
-  .footer-payments h4 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .payment-icons img {
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .payment-icons {
+  .checkboxItem {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
   }
   
-  .copyright {
-    font-size: 0.8rem;
-    margin-top: 2rem;
-    text-align: center;
+  /* Sort dropdown */
+  .dropdownMenu {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 10;
+    min-width: 200px;
   }
   
-  /* === Responsive === */
-  @media (min-width: 768px) {
-    .footer {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .newsletter {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .footer-contact-currency {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .footer-links {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 2rem;
-      border-top: none;
-    }
-  
-    .footer-section {
-      border-bottom: none;
-      padding: 0;
-    }
-  
-    .footer-section-header {
-      cursor: default;
-    }
-  
-    .footer-section-list {
-      display: block !important;
-    }
-  
-    .chevron {
-      display: none;
-    }
-  
-    .footer-payments {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .dropdownItem {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-weight: 500;
   }
   
+  .dropdownItem:hover {
+    color: #e60073;
+  }
+  
+  /* Active sort option */
+  .dropdownItem.active {
+    color: #e60073;
+  }
+  
+
+  .sidebar {
+  padding: 1rem;
+  width: 250px;
+  border-right: 1px solid #eaeaea;
+  font-size: 14px;
+}
+
+.filterSection {
+  margin-bottom: 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sectionHeader input {
+  margin-right: 0.5rem;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: auto;
+  color: #666;
+}
+
+.options {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.checkboxLabel {
+  display: block;
+  margin: 4px 0;
+}
+
+.unselect {
+  color: #0070f3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.option {
+  margin: 5px 0;
+}
