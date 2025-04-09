@@ -1,0 +1,199 @@
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 2rem 1.25rem;
+    font-family: sans-serif;
+  }
+  
+  /* Newsletter */
+  .topSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .newsletter h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .newsletter p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .inputGroup {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .inputGroup input {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    border: none;
+  }
+  
+  .inputGroup button {
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* Contact + Currency */
+  .contactCurrency {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contactCurrency h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .contactCurrency p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .contactCurrency small {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+  
+  /* Collapsible Sections */
+  .linksSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-top: 1px solid #444;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .linkGroup {
+    border-bottom: 1px solid #444;
+    padding-bottom: 1rem;
+  }
+  
+  .linkHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .linkHeader h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .linkList {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .linkList li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .open {
+    display: block;
+  }
+  
+  .chevron {
+    font-size: 0.9rem;
+  }
+  
+  /* Payment Section */
+  .paymentSection {
+    margin-top: 2rem;
+  }
+  
+  .paymentSection h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .paymentIcons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .paymentIcons img {
+    width: 38px;
+    height: auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  /* Footer bottom */
+  .copyright {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* ================= Desktop View ================= */
+  @media (min-width: 768px) {
+    .topSection {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  
+    .newsletter,
+    .contactCurrency {
+      flex: 1;
+    }
+  
+    .linksSection {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+  
+    .linkGroup {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  
+    .linkList {
+      display: block !important;
+    }
+  
+    .chevron {
+      display: none;
+    }
+  
+    .paymentSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .paymentSection h4 {
+      margin-bottom: 0;
+    }
+  }
+  
